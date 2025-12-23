@@ -1,0 +1,10 @@
+apiversion: v1
+kind: pod
+metadata:
+  name: pod-config
+data:
+ course: kubernetes
+ duration: 4hrs
+ trainer: kishore
+ location: hyd
+ time: "07:20 am to 09:00 am"

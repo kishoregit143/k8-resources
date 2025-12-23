@@ -1,0 +1,15 @@
+apiversion: v1
+kind: pod
+metadata:
+  name: forntend
+labels:
+  app: roboshop
+  environment: dev
+  version: v1  
+  component: frontend
+spec:
+ containers:
+  - name: nginx
+    image: nginx
+    ports:
+     - containerPort: 80:  
