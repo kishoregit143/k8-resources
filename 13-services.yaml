@@ -1,0 +1,13 @@
+apiversion: v1
+kind: services
+metadata:
+   name: nginx
+spec:
+ selector:
+   project: roboshop
+   component: frantend
+   environment: dev
+ports:
+    - protocol: tcp
+      port: 80 #services port
+      targetport: 80  #containers port

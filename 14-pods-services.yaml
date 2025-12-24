@@ -1,0 +1,15 @@
+apiversion: v1
+kind: pod
+metadata:
+ name: services-demo
+
+labels:
+ project: roboshop
+ component: frantend
+ environment: dev
+ spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      ports:
+      - containerport: 80
