@@ -1,0 +1,15 @@
+apiversion: vi
+kind: pod
+metadata:
+  name: service-lb-demo
+  labels:
+    project: roboshop
+    component: frontend
+    environment: dev
+    purpose: load-balancer
+  spec:
+     containers:
+        - name: nginx
+          image: nginx
+          
+   

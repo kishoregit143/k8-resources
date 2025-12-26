@@ -1,0 +1,19 @@
+apivrsion: v1
+kind: servicesport
+metadata:
+  name: nginx-np
+spec:
+  type: nodeport
+  selector:
+    project: roboshop
+    component: frantend
+    environment: dev
+    purpose: node-port
+  ports:
+   protocol: tcp
+   port: 80
+   targetport: 80 #container port
+
+
+
+
