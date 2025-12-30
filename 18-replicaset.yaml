@@ -1,0 +1,27 @@
+apiversion: v1
+kind: replicaset
+metadata:
+ name: nginx
+ #this labels are replecaset labels
+ labels:
+  purpose: rs-demo
+  project: roboshop
+spec:
+ replicas: 3
+ selector:
+ # this lablels used to  select the pods
+  matchlabels:
+   purpose: rs-demo
+   project: roboshop
+   #pod defention
+  templects:
+    metadata:
+      labels:
+      purpose: rs-demo
+      project: roboshop
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+          - containerport: 80 

@@ -11,5 +11,11 @@ metadata:
      containers:
         - name: nginx
           image: nginx
+
+  ports:
+   - protocol: tcp
+     port: 80 
+     containerport: 80
+     nodeport: 30007
           
    
