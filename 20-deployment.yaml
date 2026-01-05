@@ -17,7 +17,8 @@ spec:
   templects:
     metadata:
       labels:
-      purpose: dp-demo
+      #purpose: dp-demo
+      purpose: headless-service-demo
       project: roboshop
     spec:
       containers:
@@ -25,3 +26,17 @@ spec:
         image: nginx
         ports:
           - containerport: 80
+
+---
+apiversion: v1
+kind: services
+metadata:
+   name: nginx
+spec:
+ selector:
+   purpose: headless-service-demo
+   project: roboshop
+ports:
+    - protocol: tcp
+      port: 80 #services port
+      targetport: 80  #containers port
