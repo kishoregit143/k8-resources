@@ -1,0 +1,30 @@
+apiversion: v1
+kind: servives
+metadata:
+   name: nginx-headless
+labels:
+  app: nginx
+  purpose: statefull-demo
+spec:
+  ports:
+   - port: 80
+     name: web
+  clusterip: None
+  selector:
+    app: nginx
+    purpose: statefull-demo
+---
+apiversion: v1
+kind: servives
+metadata:
+   name: nginx
+labels:
+  app: nginx
+  purpose: statefull-demo
+spec:
+  ports:
+   - port: 80
+     name: web
+  selector:
+    app: nginx   
+    purpose: statefull-demo
